@@ -3,7 +3,6 @@
 # Ask for the sudo password once at the beginning
 sudo -v
 
-# Keep sudo active while the script is running
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "Updating package list..."
